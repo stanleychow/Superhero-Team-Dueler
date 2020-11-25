@@ -1,3 +1,6 @@
+#Random module
+import random
+
 #Hero Constructor
 class Hero():
     def __init__(self, name, starting_health = 100):
@@ -13,4 +16,4 @@ if __name__  == "__main__":
 
 #Fight Method
 def fight(self, opponent):
-    self.opponent = opponent
+    
