@@ -1,3 +1,6 @@
+from ability import Ability
+from armor import Armor
+
 #Random Module
 import random
 
@@ -10,7 +13,7 @@ class Hero():
 
 #Fight Method
     def fight(self, opponent):
-        heroes_list = [self, opponent]
+        heroes_list = [self.name, opponent.name]
         print(str(random.choice(heroes_list)) + " won!")
 
 # #Grace Hopper Constructor
