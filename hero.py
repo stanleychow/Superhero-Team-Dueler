@@ -1,4 +1,4 @@
-#Random module
+#Random Module
 import random
 
 #Hero Constructor
