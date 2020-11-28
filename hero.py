@@ -28,6 +28,10 @@ class Hero():
             total_damage += ability.attack()
         return total_damage
 
+    def add_armor(self, armor):
+        self.armors.append(armor)
+
+
 #Grace Hopper Constructor
 if __name__  == "__main__":
     my_hero = Hero("Grace Hopper", 200)
