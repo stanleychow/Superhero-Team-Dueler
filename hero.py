@@ -18,6 +18,7 @@ class Hero():
         heroes_list = [self.name, opponent.name]
         print(str(random.choice(heroes_list)) + " won!")
 
+
 #Add Ability Method
     def add_ability(self, ability):
         self.abilities.append(ability)
@@ -30,6 +31,12 @@ class Hero():
 
     def add_armor(self, armor):
         self.armors.append(armor)
+
+    def defend(self):
+        total_block = 0
+        for armor in self.armors:
+            total_block += armor.defend()
+        return total_block
 
 
 #Grace Hopper Constructor
