@@ -41,19 +41,24 @@ class Arena():
 
     def build_team_one(self):
         '''Prompt the user to build team_one '''
+        team_name = input("Enter a Team 1 name:")
+        team_one = Team(team_name)
         numOfTeamMembers = int(input("How many members would you like on Team One?\n"))
         for i in range(numOfTeamMembers):
             hero = self.create_hero()
-            self.team_one.add_hero(hero)
-
+            team_one.add_hero(hero)
+        self.team_one = team_one
     # Now implement build_team_two
     #HINT: If you get stuck, look at how build_team_one is implemented
     def build_team_two(self):
         '''Prompt the user to build team_two'''
+        team_name = input("Enter a Team 2 name:")
+        team_two = Team(team_name)
         numOfTeamMembers = int(input("How many members would you like on Team Two?\n"))
         for i in range(numOfTeamMembers):
             hero = self.create_hero()
-            self.team_two.add_hero(hero)
+            team_two.add_hero(hero)
+        self.team_two = team_two
 
     def team_battle(self):
         '''Battle team_one and team_two together.'''
@@ -80,7 +85,7 @@ class Arena():
         print(self.team_one.name + " average K/D was: " + str(team_kills/team_deaths))
 
         team_kills_2 = 0
-        team_death_2 = 0
+        team_deaths_2 = 0
         for hero in self.team_two.heroes:
             team_kills_2 += hero.kills
             team_deaths_2 += hero.deaths
